@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block anything %}
+<center>
+<div class="block">
+    <div class="output">&lt;<span>{{request.session.name}}</span>&gt;</div>
+    <form method="POST" action="/delete/">
+        {% csrf_token %}
+        <input type="submit" value="Delete The Session"/>
+    </form>
+</div>
+</center>
+{% endblock %}

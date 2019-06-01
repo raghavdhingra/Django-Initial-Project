@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+{% block anything %}
+<form method="POST" action="check/">
+    {% csrf_token %}
+    <input type="text" placeholder="Enter Your name..." value="" name="text" /><br>
+    <input type="submit" value="Submit" />
+</form>
+{% endblock %}
